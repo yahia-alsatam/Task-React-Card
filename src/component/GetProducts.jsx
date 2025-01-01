@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ProductsCard from "./ProductsCard";
 
 const GetProducts = () => {
   const [Products, setProducts] = useState([]);
@@ -15,9 +16,7 @@ const GetProducts = () => {
 
   return (
     <>
-      {Products.map((Product) => (
-        <h1 key={Product.id}>{Product.id}</h1>
-      ))}
+      <ProductsCard Products={Products} />
     </>
   );
 };
