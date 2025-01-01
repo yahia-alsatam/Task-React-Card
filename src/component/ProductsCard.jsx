@@ -4,10 +4,10 @@ const ProductsCard = ({ Products }) => {
       {" "}
       <div className="ParentDiv ">
         {Products.map((Product) => (
-          <div class="w-full  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-[510px]:w-fit">
+          <div class="w-full  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-[510px]:w-full">
             <a href="#">
               <img
-                class="p-8 rounded-t-lg"
+                class="p-8 rounded-t-lg "
                 src={Product.images}
                 alt="product image"
               />
