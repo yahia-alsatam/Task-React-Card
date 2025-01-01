@@ -4,7 +4,7 @@ const ProductsCard = ({ Products }) => {
       {" "}
       <div className="ParentDiv ">
         {Products.map((Product) => (
-          <div class="w-full  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-[510px]:w-full">
+          <div class=" flex flex-col justify-between w-full CardDiv bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-[510px]:w-full">
             <a href="#">
               <img
                 class="p-8 rounded-t-lg "
@@ -12,7 +12,7 @@ const ProductsCard = ({ Products }) => {
                 alt="product image"
               />
             </a>
-            <div class="px-5 pb-5">
+            <div class="px-5 pb-5 title">
               <a href="#">
                 <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                   {Product.title}
