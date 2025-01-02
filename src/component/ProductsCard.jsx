@@ -1,8 +1,9 @@
-import { useState } from "react";
+// Pass the products as props from the GetProducts page
 
 const ProductsCard = ({ Products }) => {
   return (
     <>
+      {/* Display the products in ready-made cards from the Tailwind library */}
       <div className="ParentDiv ">
         {Products.map((Product) => (
           <div
@@ -11,8 +12,8 @@ const ProductsCard = ({ Products }) => {
           >
             <a href="#">
               <img
-                className="p-8 rounded-t-lg "
-                src={Product.images}
+                className="p-8 rounded-t-lg  "
+                src={Product.images[0]}
                 alt="product image"
               />
             </a>
@@ -78,7 +79,7 @@ const ProductsCard = ({ Products }) => {
                 <span className="text-3xl font-bold text-gray-900 dark:text-white">
                   {Product.price}
                 </span>
-                <div></div>
+
                 <a
                   href="#"
                   className="text-white bg-teal-400 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

@@ -5,17 +5,20 @@ import apiClienet from "../services/api-clienet";
 const GetProducts = () => {
   const [Products, setProducts] = useState([]);
   const [Error, setError] = useState("");
+  // Show a loading animation in case of data delay
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
+        // Use the Axios library to fetch the products
         const response = await apiClienet.get("/");
         setProducts(response.data.products);
         setLoading(false);
       } catch (error) {
         setError(error.message);
+        // In case of an error, display a custom message in the console
         console.error("Error:", error);
         setLoading(false);
       } finally {
@@ -28,6 +31,8 @@ const GetProducts = () => {
 
   return (
     <>
+      {/* Show a loading animation in case of data delay */}
+
       {loading && (
         <div
           role="status"
@@ -52,6 +57,8 @@ const GetProducts = () => {
           <span className="sr-only">Loading...</span>
         </div>
       )}
+
+      {/* If the data is delayed, do not pass the props to the cards */}
       {!loading && <ProductsCard Products={Products} />}
     </>
   );

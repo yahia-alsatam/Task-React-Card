@@ -1,3 +1,5 @@
+/* Call Tailwind libraries */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

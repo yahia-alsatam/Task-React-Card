@@ -3,6 +3,7 @@ import logo from "../assets/img/logo.png";
 const NavBar = () => {
   return (
     <>
+      {/* Start of the navbar */}
       <div className="NavBar bg-white flex justify-around items-center h-[75px]  xxs_custom:justify-around  ">
         <img className="w-28 pt-2 hidden xs_custom:block" src={logo} alt="" />
 
@@ -38,6 +39,7 @@ const NavBar = () => {
           </button>
         </div>
       </div>
+      {/* End of the navbar */}
     </>
   );
 };
