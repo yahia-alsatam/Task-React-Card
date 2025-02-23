@@ -15,6 +15,7 @@ const ProductsCard = ({ Products }) => {
                 className="p-8 rounded-t-lg  "
                 src={Product.images[0]}
                 alt="product image"
+                loading="lazy"
               />
             </a>
             <div className="px-5 pb-5 title">
