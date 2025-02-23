@@ -13,7 +13,7 @@ const ProductsCard = ({ Products }) => {
             <a href="#">
               <img
                 className="p-8 rounded-t-lg  "
-                src={Product.images[0]}
+                src={Product.images}
                 alt="product image"
                 loading="lazy"
               />
